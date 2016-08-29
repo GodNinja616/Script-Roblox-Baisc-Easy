@@ -1,0 +1,26 @@
+workspace.Baseplate.Material = ("Grass")
+NewCol = BrickColor.new("Crismon").Color
+NewCol2 = BrickColor.new("Gold").Color
+NewCol3 = BrickColor.new("White").Color
+NewCol3aa = BrickColor.new("Smoky grey").Color
+NewCol4 = BrickColor.new("Cocoa").Color
+NewCol5 = BrickColor.new("Really black").Color
+NewCol6 = BrickColor.new("Earth green").Color
+
+
+
+while wait(0.1) do
+	workspace.Baseplate.BrickColor = BrickColor.new(NewCol)
+	wait(0.1)
+	workspace.Baseplate.BrickColor = BrickColor.new(NewCol2)
+	wait(0.1)
+	workspace.Baseplate.BrickColor = BrickColor.new(NewCol3)
+	wait(0.1)
+	workspace.Baseplate.BrickColor = BrickColor.new(NewCol3aa)
+	wait(0.1)
+	workspace.Baseplate.BrickColor = BrickColor.new(NewCol4)
+	wait(0.1)
+	workspace.Baseplate.BrickColor = BrickColor.new(NewCol5)
+	wait(0.1)
+	workspace.Baseplate.BrickColor = BrickColor.new(NewCol6)
+end
