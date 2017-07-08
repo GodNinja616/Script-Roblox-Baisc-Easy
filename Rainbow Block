@@ -1,0 +1,47 @@
+--[[
+	Title: Rainbow Block
+	Desc: just a rainbow block
+	Date: 07/04/2017
+	Creator: godninjagames
+--]]
+-------[Rainbow Block]---------	
+local part = Instance.new("Part", workspace)
+part.Material = "Neon"
+part.Size = Vector3.new(4,4,4)
+part.Name = "Block"
+local bg = Instance.new("BillboardGui", part)
+bg.Size = UDim2.new(0,100,0,50)
+bg.AlwaysOnTop = true
+bg.Adornee = part
+bg.StudsOffset = Vector3.new(0,5,0)
+local txt = Instance.new("TextLabel", bg)
+txt.BackgroundTransparency = 1
+txt.Text = ""
+txt.BorderSizePixel = 0
+txt.Size = UDim2.new(1,0,0.5,0)
+txt.Position = UDim2.new(0.1,0,0,0)
+txt.TextStrokeTransparency = 0,8
+spawn(function()
+	while wait() do
+		txt.TextColor3 = BrickColor.Random().Color
+		txt.TextStrokeColor3 = BrickColor.Random().Color
+		part.BrickColor = BrickColor.Random()
+	end
+end)
+spawn(function()
+	while wait(3) do
+		local text
+		if math.random(1,3) == 1 then
+			text = "Hello"
+		elseif math.random(1,3) == 2 then
+			text = "my name is blocky"
+		else
+			text = "i'm just a rainbow block"
+		end
+		for i = 1,string.len(text),1 do
+			txt.Text = string.sub(text,1,i)
+			wait(0.01)
+		end
+	end
+end)
+------------[End]--------------
